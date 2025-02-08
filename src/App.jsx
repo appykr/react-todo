@@ -1,19 +1,26 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import './App.css'
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
+import Login  from './components/Login'
+import Dashboard from './components/dashboard';
+import Home from './components/Home';
 
 function App() {
 
   return (
     <>
-      <Header />
-      <div className="container pt-4 mx-auto ">
-        <h1 class="text-4xl text-center">Welcome To Note</h1>
-        <div className="container flex items-center justify-center">
-        <a href="">Login</a>
-        <a href="">Sign Up</a>
-        </div>
-      </div>
+    <Header />
+    <Router>
+      <Routes>
+        <Route exact path="/" element={ <Home />} />
+        <Route path="/Login" element={ <Login />} />
+        <Route path="/Dashboard" element={ <Dashboard />} />
+      </Routes>
+
+    </Router>
+      
+      
       
 
       

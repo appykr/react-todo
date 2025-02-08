@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 } */
+
+#background {
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  min-height: 93vh;
+  overflow: hidden;
+  
+}
+
+.center-box {
+  position: absolute;
+    margin: auto;
+    top: 30%;
+    transform: translateY(-50%);
+    transform: translateX(100%);
+  }
+
+
